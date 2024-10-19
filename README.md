@@ -13,7 +13,7 @@ Start by opening your Elastic Web GUI and navigating to the Security tab by clic
 
 In my case, I have a total of 3,000 alerts, and one IP that stands out is **194.26.135.52**, using the username of **Administrator**.
 
-![Alt text](path/to/image.png)
+![Alt text](https://raw.githubusercontent.com/Virus192/Day-27-Investigating-RDP-Brute-Force-Alerts/refs/heads/main/Images/photo_6035328477617570245_w.jpg)
 
 ## Step 2: Automating Alerts to OS Ticket
 If you remember from our previous blog on SSH Brute Force alerts, we modified the alerts to automatically create a ticket in OS Ticket. We can do the same for RDP Brute Force attacks to streamline alert management.
@@ -38,9 +38,9 @@ Now, let’s focus on the core part of the investigation. Just like in SSH Brute
 ### 1. Checking the IP — 194.26.135.52
 To begin, we’ll check if this IP is known for malicious activity. As expected, the IP **23.164.57.20** is flagged as malicious and is known for performing RDP Brute Force attacks.
 
-![Alt text](path/to/image.png)
+![Alt text](https://raw.githubusercontent.com/Virus192/Day-27-Investigating-RDP-Brute-Force-Alerts/refs/heads/main/Images/photo_6035328477617570235_w.jpg)
 
-![Alt text](path/to/image.png)
+![Alt text](https://raw.githubusercontent.com/Virus192/Day-27-Investigating-RDP-Brute-Force-Alerts/refs/heads/main/Images/photo_6035328477617570236_w.jpg)
 
 
 ### 2. Identifying Affected Users
@@ -51,11 +51,9 @@ To determine if any of the login attempts were successful, search for the IP **2
 
 In our example, there were no successful logins for this IP. So, we can conclude that no unauthorized access was gained.
 
-![Alt text](path/to/image.png)
-
 However, in a different scenario we had previously tested (using a Mythic Command and Control attack), we did see a successful RDP brute force attempt.
 
-![Alt text](path/to/image.png)
+![Alt text](https://raw.githubusercontent.com/Virus192/Day-27-Investigating-RDP-Brute-Force-Alerts/refs/heads/main/Images/photo_6035328477617570244_w.jpg)
 
 ### 4. What Happened After the Login?
 Let’s explore that earlier test where we successfully logged in:
@@ -87,9 +85,9 @@ However, don’t underestimate the importance of understanding the big picture �
 ## Step 6: Automated Ticket Creation in OS Ticket
 Now that we’ve completed the investigation, you’ll notice that the RDP alert we just investigated has already been routed to OS Ticket. This automatic ticket creation allows you to track and manage alerts more efficiently. Once in OS Ticket, you can assign the ticket to yourself or another team member for further review and action.
 
-![Alt text](path/to/image.png)
+![Alt text](https://raw.githubusercontent.com/Virus192/Day-27-Investigating-RDP-Brute-Force-Alerts/refs/heads/main/Images/photo_6035328477617570253_w.jpg)
 
-![Alt text](path/to/image.png)
+![Alt text](https://raw.githubusercontent.com/Virus192/Day-27-Investigating-RDP-Brute-Force-Alerts/refs/heads/main/Images/photo_6035328477617570252_w.jpg)
 
 
 ## Conclusion: Mastering Brute Force Investigations
