@@ -36,7 +36,7 @@ Now, let’s focus on the core part of the investigation. Just like in SSH Brute
 4. If successful, what happened after the login?
 
 ### 1. Checking the IP — 194.26.135.52
-To begin, we’ll check if this IP is known for malicious activity. As expected, the IP **23.164.57.20** is flagged as malicious and is known for performing RDP Brute Force attacks.
+To begin, we’ll check if this IP is known for malicious activity. As expected, the IP **194.26.135.52** is flagged as malicious and is known for performing RDP Brute Force attacks.
 
 ![Alt text](https://raw.githubusercontent.com/Virus192/Day-27-Investigating-RDP-Brute-Force-Alerts/refs/heads/main/Images/photo_6035328477617570235_w.jpg)
 
@@ -47,7 +47,7 @@ To begin, we’ll check if this IP is known for malicious activity. As expected,
 Next, let’s investigate if other users are impacted by this IP. In our case, we found that only the **administrator** account has been targeted by this IP.
 
 ### 3. Checking for Successful Logins
-To determine if any of the login attempts were successful, search for the IP **23.164.57.20** in Elastic’s Discovery section. Use the event code **4624**, which corresponds to a successful login.
+To determine if any of the login attempts were successful, search for the IP **194.26.135.52** in Elastic’s Discovery section. Use the event code **4624**, which corresponds to a successful login.
 
 In our example, there were no successful logins for this IP. So, we can conclude that no unauthorized access was gained.
 
